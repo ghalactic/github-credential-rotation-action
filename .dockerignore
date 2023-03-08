@@ -1,1 +1,6 @@
-.git
+/.git/
+/.github/
+/.makefiles/
+/artifacts/
+/node_modules/
+/test/
