@@ -2,7 +2,9 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@actions/core": "^1.6.0"
+    "@actions/core": "^1.6.0",
+    "@octokit/action": "^5.0.2",
+    "@octokit/auth-app": "^4.0.9"
   },
   "devDependencies": {
     "es-jest": "^2.0.0",

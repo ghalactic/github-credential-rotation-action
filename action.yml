@@ -1,6 +1,17 @@
 name: GitHub Credential Rotation
 description: Automatically rotate GitHub tokens
 author: Ghalactic
+inputs:
+  appId:
+    description: >-
+      The ID of the GitHub app that this action should authenticate as in order
+      to generate credentials.
+    required: true
+  appPrivateKey:
+    description: >-
+      The PEM-formatted private key of the GitHub app that this action should
+      authenticate as in order to generate credentials.
+    required: true
 branding:
   icon: rotate-cw
   color: purple

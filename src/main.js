@@ -1,4 +1,6 @@
-import { info, setFailed } from "@actions/core";
+import { getInput, info, setFailed } from "@actions/core";
+import { Octokit } from "@octokit/action";
+import { createAppAuth } from "@octokit/auth-app";
 
 try {
   await main();
@@ -7,5 +9,24 @@ try {
 }
 
 async function main() {
-  info("It's working.");
+  const appId = getInput("appId");
+  const appPrivateKey = getInput("appPrivateKey");
+
+  if (!appId || !appPrivateKey) {
+    setFailed("App credentials (appId and appPrivateKey) are required");
+
+    return;
+  }
+
+  const { request } = new Octokit({
+    authStrategy: createAppAuth,
+    auth: {
+      appId: appId,
+      privateKey: appPrivateKey,
+    },
+  });
+
+  await group("Reading app information", async () => {
+    info(await request("/app"));
+  });
 }
