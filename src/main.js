@@ -27,6 +27,6 @@ async function main() {
   });
 
   await group("Reading app information", async () => {
-    info(await request("/app"));
+    info(JSON.stringify(await request("/app"), null, 2));
   });
 }
