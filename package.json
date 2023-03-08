@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@actions/core": "^1.6.0"
+  },
+  "devDependencies": {
+    "es-jest": "^2.0.0",
+    "jest": "^29.0.1",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.0.1"
+  }
+}
