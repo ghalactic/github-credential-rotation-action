@@ -1,4 +1,4 @@
-import { getInput, info, setFailed } from "@actions/core";
+import { getInput, group, info, setFailed } from "@actions/core";
 import { Octokit } from "@octokit/action";
 import { createAppAuth } from "@octokit/auth-app";
 
