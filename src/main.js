@@ -10,10 +10,15 @@ try {
 
 async function main() {
   const appId = getInput("appId");
+  const appInstallationId = getInput("appInstallationId");
   const appPrivateKey = getInput("appPrivateKey");
 
-  if (!appId || !appPrivateKey) {
-    setFailed("App credentials (appId and appPrivateKey) are required");
+  if (!appId || !appInstallationId || !appPrivateKey) {
+    setFailed(
+      "App credentials " +
+        "(appId, appInstallationId, and appPrivateKey)" +
+        " are required"
+    );
 
     return;
   }
@@ -23,6 +28,7 @@ async function main() {
     auth: {
       appId: appId,
       privateKey: appPrivateKey,
+      installationId: appInstallationId,
     },
   });
 

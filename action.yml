@@ -7,6 +7,11 @@ inputs:
       The ID of the GitHub app that this action should authenticate as in order
       to generate credentials.
     required: true
+  appInstallationId:
+    description: >-
+      The installation ID of the GitHub app that this action should authenticate
+      as in order to generate credentials.
+    required: true
   appPrivateKey:
     description: >-
       The PEM-formatted private key of the GitHub app that this action should
