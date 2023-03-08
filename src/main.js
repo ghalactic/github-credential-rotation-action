@@ -23,7 +23,9 @@ async function main() {
     return;
   }
 
-  const { request } = new Octokit({
+  const {
+    rest: { apps },
+  } = new Octokit({
     authStrategy: createAppAuth,
     auth: {
       appId: appId,
@@ -33,6 +35,6 @@ async function main() {
   });
 
   await group("Reading app information", async () => {
-    info(JSON.stringify(await request("/app"), null, 2));
+    info(JSON.stringify(await apps.getAuthenticated(), null, 2));
   });
 }
