@@ -35,6 +35,8 @@ async function main() {
   });
 
   await group("Reading app information", async () => {
-    info(JSON.stringify(await apps.getAuthenticated(), null, 2));
+    const { data } = await apps.getAuthenticated();
+
+    info(JSON.stringify(data, null, 2));
   });
 }
