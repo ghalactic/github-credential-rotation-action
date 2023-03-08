@@ -1,4 +1,4 @@
-import { getInput, info, setFailed, setOutput } from "@actions/core";
+import { info, setFailed } from "@actions/core";
 
 try {
   await main();
@@ -7,6 +7,5 @@ try {
 }
 
 async function main() {
-  setOutput("REPLACE_ME", getInput("REPLACE_ME"));
   info("It's working.");
 }

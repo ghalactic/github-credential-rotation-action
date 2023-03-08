@@ -1,8 +1,14 @@
-# Docker + Node.js GitHub Action template
+# GitHub Credential Rotation
 
-_A template repo for Docker + Node.js GitHub Actions_
+A [GitHub Action] that automatically rotates and distributes GitHub app
+[installation access tokens].
 
-## Usage
+[github action]: https://docs.github.com/actions
+[installation access tokens]: https://docs.github.com/apps/creating-github-apps/authenticating-with-a-github-app/generating-an-installation-access-token-for-a-github-app
 
-After creating a new repo using this template, search for `REPLACE_ME`
-(case-insensitively), and replace each instance as appropriate.
+## Inspiration
+
+This action is inspired by the ideas laid out in the Shopify Engineering blog
+post [Automatically Rotating GitHub Tokens (So You Don’t Have To)].
+
+[automatically rotating github tokens (so you don’t have to)]: https://shopify.engineering/automatically-rotate-github-tokens

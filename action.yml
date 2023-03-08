@@ -1,18 +1,9 @@
-name: REPLACE_ME
-description: REPLACE_ME
+name: GitHub Credential Rotation
+description: Automatically rotate GitHub tokens
 author: Ghalactic
-inputs:
-  REPLACE_ME:
-    description: >-
-      REPLACE_ME
-    default: ""
-outputs:
-  REPLACE_ME:
-    description: >-
-      REPLACE_ME
 branding:
-  icon: REPLACE_ME
-  color: REPLACE_ME
+  icon: rotate-cw
+  color: purple
 runs:
   using: docker
   image: Dockerfile

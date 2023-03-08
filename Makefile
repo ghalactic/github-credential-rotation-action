@@ -1,5 +1,5 @@
-CHANGELOG_TAG_URL_PREFIX := https://github.com/ghalactic/REPLACE_ME/releases/tag/
-DOCKER_REPO ?= replace_me
+CHANGELOG_TAG_URL_PREFIX := https://github.com/ghalactic/github-credential-rotation-action/releases/tag/
+DOCKER_REPO ?= github-credential-rotation-action
 
 -include .makefiles/Makefile
 -include .makefiles/pkg/js/v1/Makefile
